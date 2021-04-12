@@ -7,7 +7,7 @@ import { TableDataSource, TableItem } from './table-datasource';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -16,7 +16,7 @@ export class TableComponent implements AfterViewInit {
   dataSource: TableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'action'];
 
   constructor() {
     this.dataSource = new TableDataSource();
@@ -26,5 +26,10 @@ export class TableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+  }
+
+  onEditItem(id: any) {
+    console.log(id);
+
   }
 }
