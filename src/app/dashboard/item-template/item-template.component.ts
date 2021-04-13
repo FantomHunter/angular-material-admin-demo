@@ -18,7 +18,7 @@ import { AdDirective } from '../ad.directive';
 })
 export class ItemTemplateComponent implements OnInit {
   @Input() componentAd: AdItem | undefined;
-  @ViewChild(AdDirective, { static: true }) adHost: AdDirective | undefined;
+  @ViewChild(AdDirective, { static: true }) appAdHost: AdDirective | undefined;
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
   ngOnInit(): void {
@@ -30,16 +30,18 @@ export class ItemTemplateComponent implements OnInit {
       console.log('load Component');
 
       const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
-        this.componentAd!.component
+        this.componentAd.component
       );
 
-      const viewContainerRef = this.adHost!.viewContainerRef;
-      viewContainerRef.clear();
+      if (this.appAdHost) {
+        const viewContainerRef = this.appAdHost.viewContainerRef;
+        viewContainerRef.clear();
 
-      const componentRef = viewContainerRef.createComponent<AdComponent>(
-        componentFactory
-      );
-      componentRef.instance.data = this.componentAd!.data;
+        const componentRef = viewContainerRef.createComponent<AdComponent>(
+          componentFactory
+        );
+        componentRef.instance.data = this.componentAd.data;
+      }
     }
   }
 }

@@ -30,6 +30,9 @@ export class TableComponent implements AfterViewInit {
 
   onEditItem(id: any) {
     console.log(id);
+  }
 
+  onDeleteItem(id: any) {
+    console.log(id);
   }
 }

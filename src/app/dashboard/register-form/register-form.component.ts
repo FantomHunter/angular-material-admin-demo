@@ -13,8 +13,8 @@ import { AdComponent } from '../ad-component.type';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegisterFormComponent implements OnInit, AdComponent {
-  constructor() {}
   @Input() data: any;
+  constructor() {}
 
   ngOnInit(): void {}
 }
