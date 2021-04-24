@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemTemplateComponent } from './dashboard/item-template/item-template.component';
 import { RegisterFormComponent } from './dashboard/register-form/register-form.component';
 import { MaterialModule } from './material.module';
+import { DashboardFlexComponent } from './dashboard-flex/dashboard-flex.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MaterialModule } from './material.module';
     RegisterFormComponent,
     ItemTemplateComponent,
     AdDirective,
+    DashboardFlexComponent,
   ],
   imports: [
     BrowserModule,

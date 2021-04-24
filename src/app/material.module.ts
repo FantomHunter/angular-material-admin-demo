@@ -44,6 +44,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { TableComponent } from './table/table.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   imports: [
     MatButtonModule,
@@ -95,6 +96,7 @@ import { TableComponent } from './table/table.component';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    FlexLayoutModule,
   ],
   exports: [
     MatButtonModule,
@@ -143,6 +145,7 @@ import { TableComponent } from './table/table.component';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    FlexLayoutModule,
   ],
   declarations: [TableComponent],
 })

@@ -16,5 +16,9 @@ export class AppComponent {
       text: 'Table',
       routerLink: '/table',
     },
+    {
+      text: 'Dashboard Flex',
+      routerLink: '/dashboard-flex',
+    },
   ];
 }
