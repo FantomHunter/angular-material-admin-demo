@@ -20,5 +20,9 @@ export class AppComponent {
       text: 'Dashboard Flex',
       routerLink: '/dashboard-flex',
     },
+    {
+      text: 'Form',
+      routerLink: '/form',
+    },
   ];
 }
